@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
-}
 
+.App{
+  background-color: var(--background);
+  height:100vh
+}
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 60px;
+  filter: var(--logofilter)
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: var(--header);
+  height: 80px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  justify-content: space-between;
+  padding-right: 16px;
+}
+.App-user{
+  color: var(--headerlinktext);
+  margin: 11px 0%;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.header-left{
+  display: flex;
+  flex-flow: row nowrap
 }
 
+.theme-switch{
+  text-decoration: none;
+}
+.theme-switch::before {
+  color: var(--switchcolor);
+  content: var(--themeswitch);
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+form.login-form {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 auto;
+  width: 544px;
+  padding: 15px;
+  border: 7px solid var(--header);
+  border-radius: 7px;
+}
+.login-form h2{
+  text-align: center;
+  color: var(--header);
+}
 .App-link {
-  color: #61dafb;
+  color: indianred;
+  font-weight: bold;
+  text-decoration: none;
+  vertical-align: top;
+  line-height: 34px;
+  margin-left: 17px;
+}
+.input-box {
+  height: 39px;
+  border-radius: 4px;
+}
+.login-btn {
+  width: 203px;
+  font-size: 16px;
+  padding: 7px;
+  background: green;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  align-self: center;
+}
+label.err-label {
+  color: crimson;
+  min-height: 29px;
+  font-size: 14px;
+}
+.login-form-container {
+  display: flex;
+  flex-flow: column;
+  height: 80%;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.journal-list {
+  padding: 18px;
+  margin: 5% auto;
+  background: var(--header);
+  border-radius: 9px;
+  border-spacing: 0;
+  color: var(--background);
+}
+.journal-list th{
+  border-bottom: 4px solid var(--background);
+
+}
+.journal-list td,.journal-list th{
+  padding:12px 5px;
+}
+
+.journal-list td{
+  border-bottom:1px solid var(--background);
+}
+
+.action-link {
+  margin: 0 6px;
+  text-decoration: none;
+  color:var(--tablelink)
+}
+.input-box.readonly{
+  background: gray;
+  margin-bottom: 18px;
+}
+.input-label{
+  color: var(--header)
+}
+.new-btn {
+  background: var(--text-primary);
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  margin: 32px;
+  padding: 9px;
+  border-radius: 4px;
 }
